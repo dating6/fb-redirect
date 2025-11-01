@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>جاري التحويل من فيسبوك...</title>
+
+  <!-- 1. نزوّر الـ Referrer قبل ما نروح -->
+  <script>
+    // نزوّر الـ referrer
+    Object.defineProperty(document, 'referrer', {
+      get: () => 'https://www.facebook.com/',
+      configurable: true
+    });
+
+    // نغيّر الـ history عشان ما يرجع للصفحة الوسيطة
+    history.replaceState(null, null, 'https://www.facebook.com/');
+  </script>
+
+  <!-- 2. تحويل فوري -->
+  <meta http-equiv="refresh" content="0; url=https://user309221.psee.io/87lxcq" />
+
+  <style>
+    body {
+      margin: 0; padding: 0; background: #1877f2; color: white;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      text-align: center; height: 100vh;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+    }
+    .fb-logo {
+      width: 60px; height: 60px; background: white; color: #1877f2;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 36px; font-weight: bold; margin-bottom: 20px;
+    }
+    h1 { font-size: 24px; margin: 10px 0; }
+    p { font-size: 16px; opacity: 0.9; }
+    .loader {
+      border: 4px solid #ffffff40;
+      border-top: 4px solid white;
+      border-radius: 50%;
+      width: 40px; height: 40px;
+      animation: spin 1s linear infinite; margin: 20px 0;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    a { color: #fff; text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="fb-logo">f</div>
+  <h1>جاري تحويلك من فيسبوك...</h1>
+  <div class="loader"></div>
+  <p>إذا لم يتم التحويل تلقائيًا، <a href="https://user309221.psee.io/87lxcq">اضغط هنا</a></p>
+
+  <!-- 3. JavaScript احتياطي -->
+  <script>
+    setTimeout(() => {
+      window.location.href = "https://user309221.psee.io/87lxcq";
+    }, 500);
+  </script>
+</body>
+</html>
